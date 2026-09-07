@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Computer Tug of War</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- GAME TITLE -->
+
+    <h1>💻 COMPUTER TUG OF WAR</h1>
+
+
+    <!-- TIMER -->
+
+    <div id="timer">
+        ⏱️ Time: 30
+    </div>
+
+
+    <!-- START BUTTON -->
+
+    <button id="startBtn" onclick="startGame()">
+        ▶ START GAME
+    </button>
+
+
+    <!-- =========================
+         TEAMS
+    ========================== -->
+
+    <div class="teams">
+
+
+        <!-- TEAM 1 -->
+
+        <div class="team-box">
+
+            <h2>🔵 TEAM 1</h2>
+
+            <p id="question1">
+                Which device is used to type?
+            </p>
+
+            <button onclick="checkAnswer(1, 'Keyboard')">
+                Keyboard
+            </button>
+
+            <button onclick="checkAnswer(1, 'Monitor')">
+                Monitor
+            </button>
+
+            <p>
+                Score: <span id="score1">0</span>
+            </p>
+
+        </div>
+
+
+
+        <!-- TEAM 2 -->
+
+        <div class="team-box">
+
+            <h2>🔴 TEAM 2</h2>
+
+            <p id="question2">
+                Which device displays information?
+            </p>
+
+            <button onclick="checkAnswer(2, 'Monitor')">
+                Monitor
+            </button>
+
+            <button onclick="checkAnswer(2, 'Keyboard')">
+                Keyboard
+            </button>
+
+            <p>
+                Score: <span id="score2">0</span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TUG OF WAR
+    ========================== -->
+
+    <div class="game-area">
+
+
+        <!-- IMPORTANT:
+             STUDENTS + ROPE
+             ARE IN ONE GROUP
+        -->
+
+        <div id="tugGame">
+
+
+            <!-- TEAM 1 STUDENTS -->
+
+            <div class="student-team left-team">
+
+
+                <!-- STUDENT 1 -->
+
+                <div class="student student1">
+
+                    <div class="head"></div>
+
+                    <div class="hair"></div>
+
+                    <div class="body"></div>
+
+                    <div class="left-arm"></div>
+
+                    <div class="right-arm"></div>
+
+                    <div class="left-leg"></div>
+
+                    <div class="right-leg"></div>
+
+                </div>
+
+
+
+                <!-- STUDENT 2 -->
+
+                <div class="student student2">
+
+                    <div class="head"></div>
+
+                    <div class="hair"></div>
+
+                    <div class="body"></div>
+
+                    <div class="left-arm"></div>
+
+                    <div class="right-arm"></div>
+
+                    <div class="left-leg"></div>
+
+                    <div class="right-leg"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 ROPE
+            ========================== -->
+
+            <div id="rope">
+
+                <span class="rope-line"></span>
+
+                <span class="rope-knot">
+                    🪢
+                </span>
+
+                <span class="rope-line"></span>
+
+            </div>
+
+
+
+            <!-- TEAM 2 STUDENTS -->
+
+            <div class="student-team right-team">
+
+
+                <!-- STUDENT 3 -->
+
+                <div class="student student3">
+
+                    <div class="head"></div>
+
+                    <div class="hair"></div>
+
+                    <div class="body"></div>
+
+                    <div class="left-arm"></div>
+
+                    <div class="right-arm"></div>
+
+                    <div class="left-leg"></div>
+
+                    <div class="right-leg"></div>
+
+                </div>
+
+
+
+                <!-- STUDENT 4 -->
+
+                <div class="student student4">
+
+                    <div class="head"></div>
+
+                    <div class="hair"></div>
+
+                    <div class="body"></div>
+
+                    <div class="left-arm"></div>
+
+                    <div class="right-arm"></div>
+
+                    <div class="left-leg"></div>
+
+                    <div class="right-leg"></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RESTART BUTTON -->
+
+    <button onclick="resetGame()">
+        🔄 Restart Game
+    </button>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

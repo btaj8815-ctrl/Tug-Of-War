@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a5f, #0f766e);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    font-size: 32px;
+}
+
+
+/* =========================
+   TIMER
+========================= */
+
+#timer {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+/* =========================
+   START BUTTON
+========================= */
+
+#startBtn {
+    background-color: #f59e0b;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#startBtn:hover {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+#startBtn:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================
+   TEAMS
+========================= */
+
+.teams {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 40px;
+}
+
+
+/* =========================
+   TEAM BOX
+========================= */
+
+.team-box {
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.team-box h2 {
+    margin-top: 0;
+}
+
+.team-box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ANSWER BUTTONS
+========================= */
+
+.team-box button {
+    background-color: #2d7d46;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.team-box button:hover {
+    background-color: #1f5c33;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   GAME AREA
+========================= */
+
+.game-area {
+    width: 100%;
+    height: 210px;
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   WHOLE TUG-OF-WAR GROUP
+========================= */
+
+#tugGame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 900px;
+    height: 190px;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* =========================
+   STUDENT TEAMS
+========================= */
+
+.student-team {
+    display: flex;
+    align-items: center;
+
+    width: 210px;
+
+    position: relative;
+    z-index: 3;
+}
+
+
+/* Left students face rope */
+
+.left-team {
+    justify-content: flex-end;
+}
+
+
+/* Right students face rope */
+
+.right-team {
+    justify-content: flex-start;
+}
+
+
+/* =========================
+   STUDENT
+========================= */
+
+.student {
+    width: 100px;
+    height: 160px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   HEAD
+========================= */
+
+.student .head {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+
+    background: #f1c27d;
+
+    border: 2px solid #333;
+    border-radius: 50%;
+
+    top: 5px;
+    left: 29px;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   HAIR
+========================= */
+
+.student .hair {
+    position: absolute;
+
+    width: 45px;
+    height: 22px;
+
+    background: #292929;
+
+    border-radius: 50% 50% 20% 20%;
+
+    top: 3px;
+    left: 28px;
+
+    z-index: 4;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+.student .body {
+    position: absolute;
+
+    width: 52px;
+    height: 65px;
+
+    background: #2684d8;
+
+    border-radius: 14px;
+
+    top: 48px;
+    left: 24px;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   ARMS
+========================= */
+
+.student .left-arm,
+.student .right-arm {
+    position: absolute;
+
+    width: 50px;
+    height: 12px;
+
+    background: #f1c27d;
+
+    border-radius: 10px;
+
+    z-index: 5;
+}
+
+
+/* Arms extend toward rope */
+
+.left-arm {
+    top: 60px;
+    left: 55px;
+
+    transform: rotate(12deg);
+}
+
+.right-arm {
+    top: 78px;
+    left: 55px;
+
+    transform: rotate(-5deg);
+}
+
+
+/* =========================
+   LEGS
+========================= */
+
+.student .left-leg,
+.student .right-leg {
+    position: absolute;
+
+    width: 17px;
+    height: 55px;
+
+    background: #263238;
+
+    border-radius: 8px;
+
+    top: 108px;
+
+    z-index: 1;
+}
+
+.student .left-leg {
+    left: 30px;
+    transform: rotate(10deg);
+}
+
+.student .right-leg {
+    left: 55px;
+    transform: rotate(-10deg);
+}
+
+
+/* =========================
+   TEAM 2 STUDENTS
+========================= */
+
+.right-team .student {
+    transform: scaleX(-1);
+}
+
+
+/* Team 2 shirt */
+
+.right-team .body {
+    background: #e53935;
+}
+
+
+/* =========================
+   SECOND STUDENTS
+========================= */
+
+.student2,
+.student4 {
+    transform: scale(0.88);
+}
+
+
+/* Keep Team 2 second student facing left */
+
+.right-team .student4 {
+    transform: scaleX(-1) scale(0.88);
+}
+
+
+/* =========================
+   ROPE
+========================= */
+
+#rope {
+    width: 480px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    z-index: 2;
+}
+
+
+/* Rope itself */
+
+.rope-line {
+    display: block;
+
+    width: 210px;
+    height: 9px;
+
+    background: #d2a679;
+
+    border-radius: 10px;
+
+    border-top: 2px solid #8b5e3c;
+    border-bottom: 2px solid #8b5e3c;
+}
+
+
+/* Center knot */
+
+.rope-knot {
+    font-size: 38px;
+
+    margin: 0 5px;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   RESTART BUTTON
+========================= */
+
+button[onclick="resetGame()"] {
+    background-color: #64748b;
+
+    margin-top: 5px;
+}
+
+button[onclick="resetGame()"]:hover {
+    background-color: #475569;
+}
